@@ -1,0 +1,9 @@
+@import './reset.css';
+@import './trivia.css';
+
+@font-face {
+    font-family: 'bantangas';
+    src: url('../assets/Batangas\ Bold\ 700.otf');
+    font-weight: normal;
+    font-style: normal;
+}
