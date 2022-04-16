@@ -18,11 +18,16 @@ export const TriviaPage = () => {
                 </div>
                 <div className="button-container">
                     {
-                        questions.map( (currElement, index, array) => {
+                        questions.map( (currElement) => {
                             randomIndex = getRandomIndex(questions.length);
-                            return <button className="btn btn-secondary btn-lg">
-                            {array[randomIndex]}
-                            </button>
+                            while( usedIndex.includes(randomIndex)){
+                                randomIndex = getRandomIndex(questions.length);
+                            }
+                            usedIndex.push(randomIndex);
+                            return <button className="btn btn-secondary btn-lg"
+                                    key={randomIndex + 'q-btn'}>
+                                        {questions[randomIndex]}
+                                    </button>
                         })
                     }
                 </div>
