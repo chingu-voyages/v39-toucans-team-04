@@ -5,7 +5,6 @@ export const TriviaPage = () => {
     const questions = [...question.incorrect_answers, question.correct_answer];
     const usedIndex = [];
     let randomIndex = getRandomIndex(questions.length);
-    console.log(questions)
 
     return (
         <div className="trivia-page">
@@ -21,7 +20,7 @@ export const TriviaPage = () => {
                     {
                         questions.map( (currElement, index, array) => {
                             randomIndex = getRandomIndex(questions.length);
-                            return <button className="btn btn-primary btn-lg">
+                            return <button className="btn btn-secondary btn-lg">
                             {array[randomIndex]}
                             </button>
                         })
@@ -37,18 +36,18 @@ const getRandomIndex = (max) => {
 }
 
 // dummy data
-const question = {
-    "category": "Science: Computers",
+const question =     {
+    "category": "Entertainment: Video Games",
     "type": "multiple",
     "difficulty": "easy",
-    "question": "What does CPU stand for?",
-    "correct_answer": "Central Processing Unit",
+    "question": "Who was the voice actor for Snake in Metal Gear Solid V: The Phantom Pain?",
+    "correct_answer": "Kiefer Sutherland",
     "incorrect_answers": [
-      "Central Process Unit",
-      "Computer Personal Unit",
-      "Central Processor Unit"
+      "David Hayter",
+      "Norman Reedus",
+      "Hideo Kojima"
     ]
-}
+  }
 
 // 10 questions, science, computers, easy, multiple choice
 
