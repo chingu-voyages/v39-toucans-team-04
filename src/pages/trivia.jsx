@@ -1,4 +1,6 @@
 import React from "react";
+import previous from '../assets/images/left.png';
+import next from '../assets/images/right.png';
 
 export const TriviaPage = () => {
 
@@ -16,20 +18,36 @@ export const TriviaPage = () => {
                         { question.question }
                     </span>
                 </div>
-                <div className="button-container">
-                    {
-                        questions.map( (currElement) => {
-                            randomIndex = getRandomIndex(questions.length);
-                            while( usedIndex.includes(randomIndex)){
+
+                <div className="bottom-wrapper">
+                    <div className="meme-wrapper">
+                        <img src="https://memegenerator.net/img/instances/75222412/did-you-say-trivia-night.jpg" alt="random meme"/>
+                    </div>
+                    <div className="button-container">
+                        {
+                            questions.map( (currElement) => {
                                 randomIndex = getRandomIndex(questions.length);
-                            }
-                            usedIndex.push(randomIndex);
-                            return <button className="btn btn-secondary btn-lg"
-                                    key={randomIndex + 'q-btn'}>
-                                        {questions[randomIndex]}
-                                    </button>
-                        })
-                    }
+                                while( usedIndex.includes(randomIndex)){
+                                    randomIndex = getRandomIndex(questions.length);
+                                }
+                                usedIndex.push(randomIndex);
+                                return <button className="btn btn-secondary btn-lg"
+                                        key={randomIndex + 'q-btn'}>
+                                            {questions[randomIndex]}
+                                        </button>
+                            })
+                        }
+                    </div>
+                </div>
+
+                <div className="question-nav-btns">
+                        <div className="prev-wrapper">
+                            <img src={previous} alt="previous question" />
+                        </div>
+
+                        <div className="next-wrapper">
+                            <img src={next} alt="next question" />
+                        </div>
                 </div>
             </div>
         </div>
