@@ -31,19 +31,28 @@
     height: 80%;
     background: white;
     display: flex;
+    justify-content: center;
 }
 
 .question-container{
-    width: 60%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3.5em;
+    font-size: 3em;
+    border: 2px solid black;
+    align-self: center;
+    justify-self: center;
 }
 
 .question-container > span {
-    margin-left: 5px;
+    margin-left: 10px;
+}
+
+.btn-secondary{
+    background: #000000;
+
 }
 
 .button-container{
