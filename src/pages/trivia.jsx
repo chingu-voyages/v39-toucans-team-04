@@ -70,12 +70,12 @@ export const TriviaPage = () => {
                 <div className="question-nav-btns">
                         <div className="prev-wrapper"
                             onClick={ handlePrevious }>
-                            <img src={previous} alt="previous question" />
+                            <img className="arrow" src={previous} alt="previous question" />
                         </div>
 
                         <div className="next-wrapper"
                             onClick={ handleNext }>
-                            <img src={next} alt="next question" />
+                            <img className="arrow" src={next} alt="next question" />
                         </div>
                 </div>
             </div>

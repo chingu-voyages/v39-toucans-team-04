@@ -119,3 +119,9 @@
     font-size: 2em;
     margin-left: 50px;
 }
+
+/* ARROWS */
+.arrow:hover{
+    cursor: pointer;
+    filter: invert(50%);
+}
