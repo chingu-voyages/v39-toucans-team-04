@@ -32,7 +32,7 @@
     background: white;
     display: flex;
     flex-flow: column wrap;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 /* QUESTIONS */
 .question-container{
@@ -115,9 +115,16 @@
 }
 
 /* SCORE */
-.user-score{
+.info-text{
+    width: 100%;
     font-size: 2em;
-    margin-left: 50px;
+    display: flex;
+    margin-bottom: 2px;
+}
+
+.user-score{
+    margin-left: 10px;
+    width: 49%;
 }
 
 /* ARROWS */

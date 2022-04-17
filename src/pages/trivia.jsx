@@ -37,7 +37,10 @@ export const TriviaPage = () => {
 
             <div className="content-container">
                 
-                <span className="user-score">Score: {score}</span>
+                <div className="info-text">
+                  <span className="user-score">Score: {score}</span>
+                  <span>{currentQuestion}/10</span>
+                </div>
 
                 <div className="question-container">
                     <span>
