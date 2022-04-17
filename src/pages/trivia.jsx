@@ -26,8 +26,9 @@ export const TriviaPage = () => {
         const answer = qData[currentQuestion].correct_answer;
 
         if(selectedAnswer === answer){
-            setScore(score + 10);
-            setCurrentQuestion(currentQuestion +1);
+          if(currentQuestion === qData.length - 1) return
+          setScore(score + 10);
+          setCurrentQuestion(currentQuestion +1);
         };
     }
 
@@ -39,7 +40,7 @@ export const TriviaPage = () => {
                 
                 <div className="info-text">
                   <span className="user-score">Score: {score}</span>
-                  <span>{currentQuestion}/10</span>
+                  <span>{currentQuestion + 1}/10</span>
                 </div>
 
                 <div className="question-container">
