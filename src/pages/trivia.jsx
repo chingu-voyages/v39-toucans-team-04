@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import previous from '../assets/images/left.png';
 import next from '../assets/images/right.png';
 
 export const TriviaPage = () => {
+    const [currentQuestion, setCurrentQuestion] = useState(0);
 
-    const questions = [...question.incorrect_answers, question.correct_answer];
+    const answers = [...qData[currentQuestion].incorrect_answers,
+                    qData[currentQuestion].correct_answer];
     const usedIndex = [];
-    let randomIndex = getRandomIndex(questions.length);
+    let randomIndex = getRandomIndex(answers.length);
+
+    const handlePrevious = () => {
+        if(currentQuestion === 0) return;
+        setCurrentQuestion(currentQuestion - 1);
+    }
+
+    const handleNext = () => {
+        if(currentQuestion === qData.length) return;
+        setCurrentQuestion(currentQuestion + 1);
+    }
 
     return (
         <div className="trivia-page">
@@ -15,7 +27,7 @@ export const TriviaPage = () => {
             <div className="content-container">
                 <div className="question-container">
                     <span>
-                        { question.question }
+                        { qData[currentQuestion].question }
                     </span>
                 </div>
 
@@ -25,15 +37,15 @@ export const TriviaPage = () => {
                     </div>
                     <div className="button-container">
                         {
-                            questions.map( (currElement) => {
-                                randomIndex = getRandomIndex(questions.length);
+                            answers.map( (currElement) => {
+                                randomIndex = getRandomIndex(answers.length);
                                 while( usedIndex.includes(randomIndex)){
-                                    randomIndex = getRandomIndex(questions.length);
+                                    randomIndex = getRandomIndex(answers.length);
                                 }
                                 usedIndex.push(randomIndex);
                                 return <button className="btn btn-secondary btn-lg"
                                         key={randomIndex + 'q-btn'}>
-                                            {questions[randomIndex]}
+                                            {answers[randomIndex]}
                                         </button>
                             })
                         }
@@ -41,11 +53,13 @@ export const TriviaPage = () => {
                 </div>
 
                 <div className="question-nav-btns">
-                        <div className="prev-wrapper">
+                        <div className="prev-wrapper"
+                            onClick={ handlePrevious }>
                             <img src={previous} alt="previous question" />
                         </div>
 
-                        <div className="next-wrapper">
+                        <div className="next-wrapper"
+                            onClick={ handleNext }>
                             <img src={next} alt="next question" />
                         </div>
                 </div>
@@ -59,7 +73,7 @@ const getRandomIndex = (max) => {
 }
 
 // dummy data
-const question =     {
+const question =    {
     "category": "Entertainment: Video Games",
     "type": "multiple",
     "difficulty": "easy",
@@ -70,21 +84,127 @@ const question =     {
       "Norman Reedus",
       "Hideo Kojima"
     ]
-  }
+}
 
-// 10 questions, science, computers, easy, multiple choice
-
-// https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple
-
-/*
-
-results = [
+const qData = [
     {
-        question
-        correct_answer
-        incorrect_answers
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Pok&eacute;mon Go is a location-based augmented reality game developed and published by which company?",
+      "correct_answer": "Niantic",
+      "incorrect_answers": [
+        "Rovio",
+        "Zynga",
+        "Supercell"
+      ]
     },
-    ...
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "&quot;Tomb Raider&quot; icon Lara Croft was originally called...",
+      "correct_answer": "Laura Cruz",
+      "incorrect_answers": [
+        "Laura Craft",
+        "Laura Croft",
+        "Lara Craft"
+      ]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is Gabe Newell&#039;s favorite class in Team Fortress 2?",
+      "correct_answer": "Spy",
+      "incorrect_answers": [
+        "Heavy",
+        "Medic",
+        "Pyro"
+      ]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What was the original name of Crash Bandicoot?",
+      "correct_answer": "Willie Wombat",
+      "incorrect_answers": [
+        "Coco Bandicoot",
+        "Marvelous Mole",
+        "Wally Wombat"
+      ]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "In PROTOTYPE 2. who is referred to as &quot;Tango Primary&quot;?",
+      "correct_answer": "James Heller",
+      "incorrect_answers": [
+        "Alex Mercer",
+        "Dana Mercer",
+        "Any Goliaths roaming around"
+      ]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Which of the following was NOT a playable character in the game Kingdom Hearts: Birth by Sleep?",
+      "correct_answer": "Ignis",
+      "incorrect_answers": [
+        "Ventus",
+        "Terra",
+        "Aqua"
+      ]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "In Minecraft, which two items must be combined to craft a torch?",
+      "correct_answer": "Stick and Coal",
+      "incorrect_answers": [
+        "Stick and Fire",
+        "Wood and Coal",
+        "Wood and Fire"
+      ]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "In the Super Smash Bros. series, which character was the first one to return to the series after being absent from a previous game?",
+      "correct_answer": "Dr. Mario",
+      "incorrect_answers": [
+        "Mewtwo",
+        "Lucas",
+        "Roy"
+      ]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Which of the following is not a character in the video game Doki Doki Literature Club?",
+      "correct_answer": "Nico",
+      "incorrect_answers": [
+        "Monika",
+        "Natsuki",
+        "Sayori"
+      ]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What was the name of the canceled projected by Blizzard Entertainment that would be later become Overwatch?",
+      "correct_answer": "Titan",
+      "incorrect_answers": [
+        "Omnic",
+        "Omega",
+        "Ghost"
+      ]
+    }
 ]
-
-*/
