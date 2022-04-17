@@ -4,6 +4,7 @@ import next from '../assets/images/right.png';
 
 export const TriviaPage = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
+    const [score, setScore] = useState(0);
 
     const answers = [...qData[currentQuestion].incorrect_answers,
                     qData[currentQuestion].correct_answer];
@@ -20,11 +21,24 @@ export const TriviaPage = () => {
         setCurrentQuestion(currentQuestion + 1);
     }
 
+    const handleAnswer = (event) => {
+        const selectedAnswer = event.target.innerText;
+        const answer = qData[currentQuestion].correct_answer;
+
+        if(selectedAnswer === answer){
+            setScore(score + 10);
+            setCurrentQuestion(currentQuestion +1);
+        };
+    }
+
     return (
         <div className="trivia-page">
             <span className="nav-heading">Quizico</span>
 
             <div className="content-container">
+                
+                <span className="user-score">Score: {score}</span>
+
                 <div className="question-container">
                     <span>
                         { qData[currentQuestion].question }
@@ -43,8 +57,9 @@ export const TriviaPage = () => {
                                     randomIndex = getRandomIndex(answers.length);
                                 }
                                 usedIndex.push(randomIndex);
-                                return <button className="btn btn-secondary btn-lg"
-                                        key={randomIndex + 'q-btn'}>
+                                return <button className="btn btn-lg"
+                                        key={randomIndex + 'q-btn'}
+                                        onClick={ (event) => handleAnswer(event) }>
                                             {answers[randomIndex]}
                                         </button>
                             })
