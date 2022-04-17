@@ -16,7 +16,7 @@ export const TriviaPage = () => {
     }
 
     const handleNext = () => {
-        if(currentQuestion === qData.length) return;
+        if(currentQuestion === qData.length - 1) return;
         setCurrentQuestion(currentQuestion + 1);
     }
 
