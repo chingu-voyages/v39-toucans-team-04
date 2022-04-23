@@ -1,0 +1,115 @@
+.category-header {
+    color: white;
+    background-color: orangered;
+    border: solid orangered;
+    width: 30%;
+    margin-bottom: 0;
+}
+
+.category {
+    display: flex;
+    justify-content: flex-end;
+}
+
+hr {
+    opacity: 1;
+    width: 100%;
+    height: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: orangered;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    order: 1;
+}
+
+.category-header {
+    order: 2;
+}
+
+.Card {
+    border: solid black 3px;
+    width: 32rem; /*see what else I can use for this*/
+}
+
+.card-img-top {
+    height: 500px;
+    width: 500px;
+    padding: 5px;
+}
+
+.card-title, .card-text {
+    font-family: "DM Sans";
+    text-align: center;
+}
+
+.card-title {
+    font-size: 50px;
+}
+
+button {
+    border: solid black 2px;
+    background-color: orangered;
+    color: white;
+    font-family: "DM Sans";
+    font-size: 20px;
+    padding: 15px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.levelBtn {
+    color: black;
+    font-size: 30px;
+}
+
+.levelBtn:hover {
+    font-size: 35px;
+}
+
+.category-content {
+    display: flex;
+    flex-direction: row;
+    padding: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.general {
+    order: 1;
+    margin: 20px;
+}
+
+.computers {
+    order: 2;
+    margin: 5px;
+}
+
+.math {
+    order: 3;
+    margin: 5px;
+}
+
+p {
+    font-size: 20px;
+}
+
+/*Styles underline when hovering over Quizico link for home*/
+a:hover { 
+    color: white;
+}
+
+.science-btn:hover, .tech-btn:hover, .math-btn:hover {
+    background-color: black;
+}
+
+
