@@ -191,21 +191,23 @@ const Categories = () => {
         </div>
       </div>
 
+
       <div className="header">
-        <Link to="/">
-          <h1 className="logo">Quizico</h1>
-        </Link>
+
+        <div className="logo-styling">
+          <Link to="/">
+            <h1 className="logo">Quizico</h1>
+          </Link>
+        </div>
 
         <div className="category">
           <h2 className="category-header">Categories</h2>
         </div>
 
-        <hr />
-        <hr />
       </div>
 
       <div className="category-content">
-        <div className="Card general">
+        <div className="Card science">
           <img
             src={science}
             className="card-img-top"

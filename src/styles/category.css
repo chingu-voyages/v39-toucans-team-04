@@ -8,31 +8,27 @@
 
 .category {
     display: flex;
-    justify-content: flex-end;
-}
-
-hr {
-    opacity: 1;
-    width: 100%;
-    height: 50px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 0;
-    margin-bottom: 0;
-    background-color: orangered;
+    align-self: flex-end;
 }
 
 .header {
     display: flex;
-    flex-direction: column;
-}
-
-.logo {
-    order: 1;
+    width: 100%;
+    border-bottom: 5px solid orangered;
+    justify-content: space-between;
 }
 
 .category-header {
-    order: 2;
+    width: 100%;
+}
+
+.logo {
+    align-self: flex-start;
+    margin: 0px 0px 0px 0px;
+}
+
+.logo-styling {
+    vertical-align: bottom;
 }
 
 .Card {
@@ -84,7 +80,7 @@ button {
     align-items: center;
 }
 
-.general {
+.science {
     order: 1;
     margin: 20px;
 }
