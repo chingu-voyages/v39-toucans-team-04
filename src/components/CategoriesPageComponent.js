@@ -1,11 +1,12 @@
 import React from "react";
-import science from "../assets/images/science.jpg";
-import computers from "../assets/images/computers.jpg";
-import math from "../assets/images/math.jpg";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { categoryAction } from "../redux/categoryaction";
 import { difficultyAction } from "../redux/difficultyaction";
+import science from "../assets/images/science.jpg";
+import computers from "../assets/images/computers.jpg";
+import math from "../assets/images/math.jpg";
+import logo from "../assets/images/logo.png";
 
 const Categories = () => {
   const dispatch = useDispatch();
@@ -196,7 +197,7 @@ const Categories = () => {
 
         <div className="logo-styling">
           <Link to="/">
-            <h1 className="logo">Quizico</h1>
+            <img src={logo} alt="quizico logo" />
           </Link>
         </div>
 
