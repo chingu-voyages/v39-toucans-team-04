@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import previous from '../assets/images/left.png';
+import React, { useState, useEffect } from "react";
+import { Modal } from "./endModal";
 import next from '../assets/images/right.png';
 
 export const TriviaPage = () => {
@@ -11,31 +11,39 @@ export const TriviaPage = () => {
     const usedIndex = [];
     let randomIndex = getRandomIndex(answers.length);
 
-    const handlePrevious = () => {
-        if(currentQuestion === 0) return;
-        setCurrentQuestion(currentQuestion - 1);
-    }
-
     const handleNext = () => {
         if(currentQuestion === qData.length - 1) return;
         setCurrentQuestion(currentQuestion + 1);
     }
 
+    // handle when user answers a question
     const handleAnswer = (event) => {
+        const modal = document.getElementById('modelo');
+        const selectedBtn = event.target;
         const selectedAnswer = event.target.innerText;
         const answer = qData[currentQuestion].correct_answer;
 
         if(selectedAnswer === answer){
-          if(currentQuestion === qData.length - 1) return
           setScore(score + 10);
-          setCurrentQuestion(currentQuestion +1);
-        };
+          selectedBtn.classList.add('btn-success');
+        }
+        else selectedBtn.classList.add('btn-danger');
+
+        setTimeout( () => {
+          selectedBtn.classList.remove('btn-success');
+          selectedBtn.classList.remove('btn-danger');
+          if(currentQuestion === qData.length - 1){
+            modal.style.visibility = "visible"
+            return
+          }
+          setCurrentQuestion(currentQuestion + 1)
+        }, 2000);
     }
 
     return (
         <div className="trivia-page">
             <span className="nav-heading">Quizico</span>
-
+            <Modal score={score} />
             <div className="content-container">
                 
                 <div className="info-text">
@@ -72,11 +80,6 @@ export const TriviaPage = () => {
                 </div>
 
                 <div className="question-nav-btns">
-                        <div className="prev-wrapper"
-                            onClick={ handlePrevious }>
-                            <img className="arrow" src={previous} alt="previous question" />
-                        </div>
-
                         <div className="next-wrapper"
                             onClick={ handleNext }>
                             <img className="arrow" src={next} alt="next question" />
@@ -88,7 +91,7 @@ export const TriviaPage = () => {
 }
 
 const getRandomIndex = (max) => {
-    return Math.floor(Math.random() * max);
+  return Math.floor(Math.random() * max);
 }
 
 // dummy data

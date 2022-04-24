@@ -51,19 +51,6 @@
     margin-left: 10px;
 }
 
-.question-nav-btns{
-    align-self: center;
-    width: 90%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-}
-
-.question-nav-btns > div > img {
-    width: 50px;
-    height: 50px;
-}
-
 /* BUTTONS */
 .btn{
     color: #ffffff;
@@ -78,7 +65,7 @@
 
 .bottom-wrapper{
     width: 90%;
-    height: 40%;
+    height: 60%;
     align-self: center;
     display: flex;
     flex-flow: row wrap;
@@ -128,7 +115,48 @@
 }
 
 /* ARROWS */
+.question-nav-btns{
+    width: 90%;
+}
+
+.question-nav-btns > div > img {
+    width: 50px;
+    height: 50px;
+}
+.arrow {
+    float: right;
+}
+
 .arrow:hover{
     cursor: pointer;
     filter: invert(50%);
+}
+
+/* MODAL */
+.modelo{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    width: 50%;
+    height: 25%;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.modelo-text{
+    font-size: 3em;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modelo-btn-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
