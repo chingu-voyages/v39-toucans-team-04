@@ -1,20 +1,27 @@
 @import './landing.css';
 @import './category.css';
+@import './trivia.css';
 
 @font-face {
     font-family: "Batangas";
     src: local("Batangas"), url("../assets/font/Batangas-Bold.otf") format("truetype");
     font-weight: bold;
-  }
+}
   
-  h1 {
-    font-family: "Batangas";
-    font-size: 100px;
-    color:orangered;
-  }
-  
-  h2 {
+h1 {
+  font-family: "Batangas";
+  font-size: 100px;
+  color:orangered;
+}
+
+h2 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 70px;
+  text-align: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+#app {
     font-family: 'DM Sans', sans-serif;
-    font-size: 70px;
-    text-align: center;
-  }
+}
