@@ -24,7 +24,6 @@
 
 .logo {
     align-self: flex-start;
-    margin: 0px 0px 0px 0px;
 }
 
 .logo-styling {
@@ -97,11 +96,6 @@ button {
 
 p {
     font-size: 20px;
-}
-
-/*Styles underline when hovering over Quizico link for home*/
-a:hover { 
-    color: white;
 }
 
 .science-btn:hover, .tech-btn:hover, .math-btn:hover {
