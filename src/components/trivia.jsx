@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { useSelector } from 'react-redux';
 import { Modal } from "./endModal";
 import next from '../assets/images/right.png';
 
 export const TriviaPage = () => {
+    const category = useSelector( state => state.category);
+    const difficulty = useSelector( state => state.difficulty);
+
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [score, setScore] = useState(0);
 
