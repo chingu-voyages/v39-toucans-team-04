@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { categoryAction } from "../redux/categoryaction";
 import { difficultyAction } from "../redux/difficultyaction";
@@ -10,6 +10,7 @@ import logo from "../assets/images/logo.png";
 
 const Categories = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const state = useSelector(state => state.category);
 
@@ -19,6 +20,15 @@ const Categories = () => {
 
   const DifficultyHandler = (e) => {
     dispatch(difficultyAction(e.target.value));
+    navigate('../trivia');
+
+    // removes the modal backdrop after redirecting user to trivia page
+    let body = document.querySelector('body');
+    body.classList.remove('modal-open');
+    let modals =  document.querySelectorAll('div.modal-backdrop')
+    modals.forEach( modal => {
+      modal.remove();
+    })
   }
 
   return (
