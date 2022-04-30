@@ -1,8 +1,9 @@
-# voyage-tasks
+# Quizico
 
-Your project's `readme` is as important to success as your code. For 
-this reason you should put as much care into its creation and maintenance
-as you would any other component of the application.
+We created Quizico, a trivia game website based on STEM related questions.
+We encourage users 15 and older to utilize our game to test their knowledge
+in science, technology, engineering and math related topics. This encourages
+users to engage in healthy activities to excersize their brains. 
 
 If you are unsure of what should go into the `readme` let this article,
 written by an experienced Chingu, be your starting point - 
