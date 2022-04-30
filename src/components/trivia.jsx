@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Modal } from "./endModal";
 import next from '../assets/images/right.png';
@@ -6,6 +7,8 @@ import next from '../assets/images/right.png';
 export const TriviaPage = () => {
     const category = useSelector( state => state.category);
     const difficulty = useSelector( state => state.difficulty);
+
+    console.log(category, difficulty);
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [score, setScore] = useState(0);
@@ -44,9 +47,19 @@ export const TriviaPage = () => {
         }, 2000);
     }
 
+    // removes the modal backdrop after redirecting user to trivia page
+    let body = document.querySelector('body');
+    body.classList.remove('modal-open');
+    let modals =  document.querySelectorAll('div.modal-backdrop')
+    modals.forEach( modal => {
+      modal.remove();
+    })
+
     return (
         <div className="trivia-page">
-            <span className="nav-heading">Quizico</span>
+            <Link to="/">
+              <span className="nav-heading">Quizico</span>
+            </Link>
             <Modal score={score} />
             <div className="content-container">
                 

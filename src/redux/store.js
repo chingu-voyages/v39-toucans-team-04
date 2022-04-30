@@ -3,8 +3,9 @@ import { difficultyReducer } from './difficultyreducer';
 import { createStore, combineReducers } from 'redux';
 
 const reducers = combineReducers({
-    category: categoryReducer, difficultyReducer
+    category: categoryReducer,
+    difficulty: difficultyReducer
 })
-const store = createStore(reducers);
+const store = createStore(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 export default store;

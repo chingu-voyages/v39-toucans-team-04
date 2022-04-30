@@ -21,14 +21,6 @@ const Categories = () => {
   const DifficultyHandler = (e) => {
     dispatch(difficultyAction(e.target.value));
     navigate('../trivia');
-
-    // removes the modal backdrop after redirecting user to trivia page
-    let body = document.querySelector('body');
-    body.classList.remove('modal-open');
-    let modals =  document.querySelectorAll('div.modal-backdrop')
-    modals.forEach( modal => {
-      modal.remove();
-    })
   }
 
   return (
