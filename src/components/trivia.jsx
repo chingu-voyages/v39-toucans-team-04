@@ -5,10 +5,8 @@ import { Modal } from "./endModal";
 import next from '../assets/images/right.png';
 
 export const TriviaPage = () => {
-    const category = useSelector( state => state.category);
-    const difficulty = useSelector( state => state.difficulty);
-
-    console.log(category, difficulty);
+    const category = useSelector( state => state.category.value);
+    const difficulty = useSelector( state => state.difficulty.value);
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [score, setScore] = useState(0);
