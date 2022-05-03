@@ -16,8 +16,8 @@ in science, technology, engineering and math related topics. This encourages use
 Yasmin
 
 ### Developers
-Julian Gonzalez - https://github.com/snowlizard
-Junalynn Caoli - https://github.com/junalynnc
+- Julian Gonzalez - https://github.com/snowlizard
+- Junalynn Caoli - https://github.com/junalynnc
 
 # Instructions
 - Fork this repository
