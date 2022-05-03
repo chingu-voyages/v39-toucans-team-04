@@ -12,10 +12,10 @@ in science, technology, engineering and math related topics. This encourages use
 
 ### Contributors 
 
-## Product Owner
+### Product Owner
 Yasmin
 
-## Developers
+### Developers
 Julian Gonzalez - https://github.com/snowlizard
 Junalynn Caoli - https://github.com/junalynnc
 
