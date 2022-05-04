@@ -15,7 +15,7 @@ const App = () => {
         <Routes>
             <Route path="/" element={ <Landing/> } />
             <Route path="/categories" element={ <Categories/>} />
-            <Route path='/triva' element={ <TriviaPage /> } />
+            <Route path='/trivia' element={ <TriviaPage /> } />
         </Routes> 
       </BrowserRouter>
     </Provider>

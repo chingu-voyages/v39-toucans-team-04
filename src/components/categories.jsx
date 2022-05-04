@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { categoryAction } from "../redux/categoryaction";
-import { difficultyAction } from "../redux/difficultyaction";
+import { updateCategory } from "../redux/categoryreducer";
+import { updateDifficulty } from '../redux/difficultyreducer';
 import science from "../assets/images/science.jpg";
 import computers from "../assets/images/computers.jpg";
 import math from "../assets/images/math.jpg";
@@ -10,15 +10,17 @@ import logo from "../assets/images/logo.png";
 
 const Categories = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  const state = useSelector(state => state.category);
+  const state = useSelector(state => state.difficulty);
 
   const CategoryHandler = (e) => {
-    dispatch(categoryAction(e.target.value));
+    dispatch(updateCategory(e.target.value));
   }
 
   const DifficultyHandler = (e) => {
-    dispatch(difficultyAction(e.target.value));
+    dispatch(updateDifficulty(e.target.value));
+    navigate('../trivia');
   }
 
   return (

@@ -1,10 +1,12 @@
-import { categoryReducer } from './categoryreducer';
-import { difficultyReducer } from './difficultyreducer';
-import { createStore, combineReducers } from 'redux';
+import categoryReducer from './categoryreducer';
+import difficultyReducer from './difficultyreducer';
+import { configureStore } from '@reduxjs/toolkit';
 
-const reducers = combineReducers({
-    category: categoryReducer, difficultyReducer
+const store = configureStore({
+    reducer: {
+        category: categoryReducer,
+        difficulty: difficultyReducer
+    }
 })
-const store = createStore(reducers);
 
 export default store;

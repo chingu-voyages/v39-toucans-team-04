@@ -4,11 +4,13 @@
     "description": "quizico",
     "main": "app.jsx",
     "scripts": {
-        "start": "webpack serve --mode development --entry ./src/app.jsx"
+        "start": "webpack serve --mode development --entry ./src/app.jsx",
+        "build": "webpack --mode production"
     },
     "author": "snowlizard/Junalynn",
     "license": "ISC",
     "dependencies": {
+        "@reduxjs/toolkit": "^1.8.1",
         "react": "^18.0.0",
         "react-dom": "^18.0.0",
         "react-redux": "^8.0.1",
