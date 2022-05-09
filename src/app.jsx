@@ -14,8 +14,8 @@ const App = () => {
       <BrowserRouter>
         <Routes>
             <Route path="/" element={ <Landing/> } />
-            <Route path="/categories" element={ <Categories/>} />
-            <Route path='/trivia' element={ <TriviaPage /> } />
+            <Route path="categories" element={ <Categories/>} />
+            <Route path='trivia' element={ <TriviaPage /> } />
         </Routes> 
       </BrowserRouter>
     </Provider>

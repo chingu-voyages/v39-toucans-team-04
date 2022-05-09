@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const Modal = (props) => {
     
@@ -10,10 +11,12 @@ export const Modal = (props) => {
                 </span>
             </div>
             <div className="modelo-btn-wrapper">
+                <Link to="/">
                     <button className="btn btn-lg">
                         Home
                     </button>
-                </div>
+                </Link>
+            </div>
         </div>
     );
 }
