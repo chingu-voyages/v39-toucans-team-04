@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Modal } from "./endModal";
 import next from '../assets/images/right.png';
+import { techPics } from './mixins/tech';
+import { mathPics } from './mixins/math';
+import { sciencePics } from './mixins/science';
+
 
 export const TriviaPage = () => {
     const category = useSelector( state => state.category.value);
@@ -12,9 +16,14 @@ export const TriviaPage = () => {
     const [answers, setAnswers] = useState([]);
     const [score, setScore] = useState(0);
     const [currentQuestion, setCurrentQuestion] = useState(0);
+    const [photoIndex, setPhotoIndex] = useState(getRandomIndex(6));
     const usedIndex = [];
     let randomIndex = getRandomIndex(answers.length);
 
+    // set photo for each category
+    const photos = category === '17' ? sciencePics :
+    category === '18' ? techPics : mathPics;
+    
     const htmlEntities = {
       "&amp;": "&",
       "&lt;" : "<",
@@ -42,6 +51,7 @@ export const TriviaPage = () => {
         setAnswers([...questions[currentQuestion].incorrect_answers,
           questions[currentQuestion].correct_answer]);
       }
+      setPhotoIndex(getRandomIndex(photos.length));
     }, [currentQuestion]);
 
     const handleNext = () => {
@@ -103,7 +113,7 @@ export const TriviaPage = () => {
 
           <div className="bottom-wrapper">
               <div className="meme-wrapper">
-                  <img src="https://memegenerator.net/img/instances/75222412/did-you-say-trivia-night.jpg" alt="random meme"/>
+                  <img src={photos[photoIndex]} alt="random meme"/>
               </div>
               <div className="button-container">
                   {
