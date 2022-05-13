@@ -3,16 +3,19 @@
         flex-direction: column;
     }
 
-    .landingHeader {
-        margin: auto;
+    .landingContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
     }
 
     #bunny-pic {
-        height: 50vh;
+        height: 65vh;
         width: 100vw;
     }
 
-    .landingAll > .landingText > h2 {
+    .landingContent > .landingText > h2 {
         font-family: 'DM Sans', sans-serif;
         font-size: 50px;
         text-align: center;
@@ -26,6 +29,7 @@
     #logo {
         height: 10vh;
         width: 60vw;
+        margin-top: 30px;
     }
 
     #play-now-btn {
@@ -41,14 +45,20 @@
 }
 
 
-
-@media all and (min-width: 700px) {
+@media all and (min-width: 700px) and (max-width: 999px) {
     .landingAll {
         flex-direction: column;
     }
 
+    .landingContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+    }
+
     #bunny-pic {
-        height: 65vh;
+        height: 75vh;
         width: 100vw;
     }
 
@@ -60,12 +70,13 @@
       #logo {
         height: 20vh;
         width: 65vw;
-        padding-top: 20px;
+        margin-top: 30px;
     }
 
-    .landingAll > .landingText > h2 {
+    .landingContent > .landingText > h2 {
         font-family: 'DM Sans', sans-serif;
         font-size: 80px;
+        text-align: center;
     }
 
     #play-now-btn {
@@ -76,7 +87,6 @@
         font-size: 70px;
         padding: 5px;
         margin-bottom: 30px;
-        width: 100%; 
     }
 
 
@@ -86,7 +96,15 @@
 @media all and (min-width: 1000px) {
     .landingAll {
         display: flex;
+        flex-direction: row;
+    }
+
+    .landingContent {
+        display: flex;
         flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+        order: -1;
     }
 
     #bunny-pic {
@@ -94,33 +112,37 @@
         width: 50vw;
     }
 
-    #logo {
-        height: 20vh;
+    .landingContent > #logo {
+        height: 30vh;
         width: 30vw;
     }
 
-    .landingAll > .landingText > h2 {
+    .landingAll > .landingContent > .landingText > h2 {
         font-family: 'DM Sans', sans-serif;
-        font-size: 70px;
+        font-size: 80px;
         text-align: center;
+        margin-top: 70px;
+        margin-bottom: 70px;
     }
 
-    .play-now-btn {
+    #play-now-btn {
         border: solid black 3px;
         background-color: black;
         color: white;
         font-family: "DM Sans";
         font-size: 25px;
         padding: 30px;
+        width: 100%;
     }
     
-    .play-now-btn:hover{
+    #play-now-btn:hover{
         border: solid orangered 3px;
         background-color: orangered;
         color: white;
         font-family: "DM Sans";
         font-size: 25px;
         padding: 30px;
+        width: 100%;
     }
 
 }
