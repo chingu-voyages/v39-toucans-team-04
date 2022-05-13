@@ -44,6 +44,7 @@ const Categories = () => {
                 className="close"
                 data-dismiss="modal"
                 aria-label="Close"
+                style={{ border: "none", backgroundColor: "none"}}
               >
                 <span aria-hidden="true">&times;</span>
               </button>
