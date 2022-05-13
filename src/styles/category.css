@@ -1,4 +1,7 @@
 .category-header {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 70px;
+    text-align: center;
     color: white;
     background-color: orangered;
     border: solid orangered;
@@ -32,12 +35,12 @@
 
 .Card {
     border: solid black 3px;
-    width: 32rem; /*see what else I can use for this*/
+    width: 30rem; /*see what else I can use for this*/
 }
 
 .card-img-top {
     height: 500px;
-    width: 500px;
+    width: 450px;
     padding: 5px;
 }
 

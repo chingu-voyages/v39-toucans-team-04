@@ -7,22 +7,22 @@ import { Link } from "react-router-dom";
 const Landing = () => {
   return (
     <div className="landingAll">
-      <div className="landingContent">
-        <div className="landingHeader logo-order">
-          <img src={logo} alt="quizico logo" className="logo" />
-        </div>
-        <div className="landingText text-order">
-          <h2 style={{ paddingBottom: "60px" }}>
-            Train your brain with our trivia game!
-          </h2>
-          <Link to="/categories">
-            <Button className="play-now-btn">PLAY NOW</Button>
-          </Link>
-        </div>
+      <div className="landingImage">
+        <img src={bunny} alt="bunny" id="bunny-pic"/>
       </div>
 
-      <div className="landingImage">
-        <img src={bunny} alt="bunny" />
+      <div className="landingHeader">
+        <img src={logo} alt="quizico logo" id="logo" />
+      </div>
+
+      <div className="landingText">
+        <h2>Train your brain with our trivia game!</h2>
+      </div>
+
+      <div className="button">
+        <Link to="/categories">
+          <button id="play-now-btn">PLAY NOW</button>
+        </Link>
       </div>
     </div>
   );

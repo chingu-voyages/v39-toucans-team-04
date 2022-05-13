@@ -7,18 +7,6 @@
     src: local("Batangas"), url("../assets/font/Batangas-Bold.otf") format("truetype");
     font-weight: bold;
 }
-  
-h1 {
-  font-family: "Batangas";
-  font-size: 100px;
-  color:orangered;
-}
-
-h2 {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 70px;
-  text-align: center;
-}
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 

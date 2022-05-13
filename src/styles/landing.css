@@ -1,66 +1,108 @@
-@media screen and (max-width: 600px) {
-        .landingImage {
-            display: none;
-        }
-
-        .logo {
-            width: 30%;
-        }
-
-        h2 {
-            font-size: 30px;
-        }
-    }
-
-
-@media screen and (min-width: 1024px) {
-
-    /*Parent Element*/
+@media all and (max-width: 699px) {
     .landingAll {
-        height: 100vh;
-        width: 100vw;
-        display: flex;
-        justify-content: center; 
-        align-items: center;
-    }
-
-    .landingContent {
-        display: flex;
         flex-direction: column;
-        justify-content: center; 
-        align-items: center;
     }
 
-
-    /*Children Elements*/
     .landingHeader {
-        height: 50%;
-        display: flex;
-        justify-content: center; 
-        align-items: center;
+        margin: auto;
+    }
+
+    #bunny-pic {
+        height: 50vh;
+        width: 100vw;
+    }
+
+    .landingAll > .landingText > h2 {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 50px;
+        text-align: center;
+      }
+
+    .landingText {
+        padding-top: 15px;
+        padding-bottom: 30px;
+      }
+
+    #logo {
+        height: 10vh;
+        width: 60vw;
+    }
+
+    #play-now-btn {
+        border: solid black 3px;
+        background-color: black;
+        color: white;
+        font-family: "DM Sans";
+        font-size: 30px;
+        padding: 5px;
+        margin-bottom: 30px;
+        width: 60vw; 
+    }
+}
+
+
+
+@media all and (min-width: 700px) {
+    .landingAll {
+        flex-direction: column;
+    }
+
+    #bunny-pic {
+        height: 65vh;
+        width: 100vw;
     }
 
     .landingText {
-        height: 50%;
-        width: 50%;
+        padding-top: 15px;
+        padding-bottom: 30px;
+      }
+
+      #logo {
+        height: 20vh;
+        width: 65vw;
+        padding-top: 20px;
+    }
+
+    .landingAll > .landingText > h2 {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 80px;
+    }
+
+    #play-now-btn {
+        border: solid black 3px;
+        background-color: black;
+        color: white;
+        font-family: "DM Sans";
+        font-size: 70px;
+        padding: 5px;
+        margin-bottom: 30px;
+        width: 100%; 
+    }
+
+
+}
+
+
+@media all and (min-width: 1000px) {
+    .landingAll {
         display: flex;
-        flex-flow: column wrap;
-        justify-content: center; 
-        align-items: center;
-        padding-top: 70px; /*add space above element*/
+        flex-direction: column;
     }
 
-    .landingImage > img {
-        height: 100%;
-        width: 100%;
+    #bunny-pic {
+        height: 100vh;
+        width: 50vw;
     }
 
-    .logo-order { /*organizes content in order based on row/column of parent element*/
-        order: -1;
+    #logo {
+        height: 20vh;
+        width: 30vw;
     }
 
-    .text-order {
-        order: 1;
+    .landingAll > .landingText > h2 {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 70px;
+        text-align: center;
     }
 
     .play-now-btn {
@@ -70,9 +112,8 @@
         font-family: "DM Sans";
         font-size: 25px;
         padding: 30px;
-        width: 100%;
     }
-
+    
     .play-now-btn:hover{
         border: solid orangered 3px;
         background-color: orangered;
@@ -80,7 +121,6 @@
         font-family: "DM Sans";
         font-size: 25px;
         padding: 30px;
-        width: 100%;
     }
 
 }
