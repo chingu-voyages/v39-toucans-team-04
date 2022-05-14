@@ -24,7 +24,7 @@ const Categories = () => {
   }
 
   return (
-    <div>
+    <div className="categoryContainer">
       <div
         className="modal fade"
         id="scienceModal"

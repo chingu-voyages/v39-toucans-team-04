@@ -1,3 +1,60 @@
+@media all and (max-width: 699px) {
+    .header > .category > .category-header {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 70px;
+        text-align: center;
+        color: white;
+        background-color: orangered;
+        border: solid orangered;
+        width: 30%;
+        margin-bottom: 0;
+    }
+
+    .categoryContainer > .category-content {
+        display: flex;
+        flex-direction: column;
+        padding: 100px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .categoryContainer > .category-content > .Card {
+        border: solid black 3px;
+        width: 80vw;
+        height: 60vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .categoryContainer > .category-content > .Card > img {
+        height: 300px;
+        width: 200px;
+        align-self: center;
+    }
+
+    .categoryContainer > .category-content > .Card > .card-body > h5 {
+        font-size: 30px;
+    }
+
+    .categoryContainer > .category-content > .Card > .card-body > p {
+        font-size: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .categoryContainer > .category-content > .Card > .card-body > button {
+        border: solid black 2px;
+        background-color: orangered;
+        color: white;
+        font-family: "DM Sans";
+        font-size: 15px;
+        padding: 15px;
+        width: 80%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
 .category-header {
     font-family: 'DM Sans', sans-serif;
     font-size: 70px;
